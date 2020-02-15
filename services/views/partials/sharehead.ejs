@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<title><%= title %></title>
+<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  setInterval(function(){
+    $('#reloadme').load(document.URL +  ' #reloadme');
+  }, 5000);
+</script>
+<style type="text/css">
+    body{ font: 14px sans-serif; color:#000000; }
+    .wrapper{ width: 350px; padding: 20px; }
+</style>

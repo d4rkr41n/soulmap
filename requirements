@@ -1,0 +1,5 @@
+npm install colors
+npm install express
+npm install path
+npm install body-parser
+npm install ejs

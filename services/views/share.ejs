@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head.ejs') %>
+</head>
+<body class="body-box-menu">
+    <div class="wrapper slide-bottom box-menu">
+        <ul>
+        <% for (var i = 0; i < files.length; i++) { %>
+            <li><%= files[i] %></li>
+        <% } %>
+        </ul>
+    </div>
+</body>
+</html>
