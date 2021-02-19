@@ -11,9 +11,8 @@
             "  ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝      ",
             " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"]
     },
-    "attackcfg" : {
-        "targets" : "127.0.0.1",
-        "exclude" : ""
+    "generalcfg" : {
+        "defaultRunMode" : "i"
     },
     "servercfg" : {
         "dashboard" : {

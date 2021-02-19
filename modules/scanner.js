@@ -1,5 +1,7 @@
 module.exports = {
 
+  // Update to push results to local db
+
   runscan: function (hosts, params) {
     const { spawn } = require('child_process');
     const nmap = spawn('nmap', [hosts,'-p22','--open','-oG','-']);

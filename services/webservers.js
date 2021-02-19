@@ -14,8 +14,8 @@ module.exports = {
     // set the view engine to ejs
     app.set('view engine', 'ejs');
     app.set('views', path.join('./services/views'));
-    app.use('/public', express.static(__dirname + '/public'));
-    app.use('/share', express.static(__dirname + '/share'));
+    app.use('/', express.static(__dirname + '/public'));
+    app.use('/', express.static(__dirname + '/share'));
 
     var addr = bindaddr;
     var port = bindport;
@@ -26,16 +26,17 @@ module.exports = {
 
     app.get('/', (req, res) => {
         // Grab all the files in a directory
-        const directoryPath = path.join(__dirname, 'Documents');
+        const directoryPath = path.join(__dirname, 'share/');
         var files;
-        fs.readdir(directoryPath, function (err, files) {
+        files = fs.readdir(directoryPath, function (err, files) {
             if (err) {
                 return console.log('Unable to scan files: ' + err);
             }
+            res.render('share',{title:'Fileshare', files:files, error:''});
         });
 
         //Send the file list to the rendering
-        res.render('share',{title:'Fileshare', files:files, error:''});
+        //res.render('share',{title:'Fileshare', files:files, error:''});
     });
 
   },

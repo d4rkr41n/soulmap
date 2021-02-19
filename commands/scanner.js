@@ -1,6 +1,6 @@
 module.exports = {
 
-  runscan: function (hosts, params) {
+  nmap: function (hosts, params) {
     const { spawn } = require('child_process');
     const nmap = spawn('nmap', [hosts,'-p22','--open','-oG','-']);
 
